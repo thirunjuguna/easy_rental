@@ -1,0 +1,29 @@
+<% if current_user.present? %>
+  <% if current_user.roles.pluck(:name).include?('administrator') %>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to('Dashboard', dashboard_path, class: 'nav-link') %>
+      </li>
+      <li class="nav-item">
+        <%= link_to('Users', users_path, class: 'nav-link') %>
+
+      </li>
+      <li class="nav-item">
+        <%= link_to('Billing', billings_path,class: 'nav-link') %>
+      </li>
+    </ul>
+  <% else %>
+  <% end %>
+<% else %>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pricing</a>
+    </li>
+  </ul>
+<% end %>
