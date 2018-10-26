@@ -1,24 +1,28 @@
-# README
+# easy_rental service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development
 
-Things you may want to cover:
+This project is configured to run in Docker containers facilitated by `docker-compose`. [nib](https://github.com/technekes/nib) is our tool of choice for interacting with `docker-compose` in development.
 
-* Ruby version
+### Running the app
 
-* System dependencies
+Use [nib](https://github.com/technekes/nib) to build and start up the web app.
 
-* Configuration
+```sh
+nib build --pull
+nib up
+```
 
-* Database creation
+### Running Tests
 
-* Database initialization
+The app is configured to use [guard](https://github.com/guard/guard) facilitate running the tests as files change. To start up guard run:
 
-* How to run the test suite
+```sh
+nib guard web
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Alternatively the specs can be run as a one-off with:
 
-* Deployment instructions
-
-* ...
+```sh
+nib rspec web
+```
