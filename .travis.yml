@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: technekes/circleci:latest
+
+    working_directory: /usr/src/app
+
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 17.09.0-ce
+
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            cc_download_url=https://codeclimate.com/downloads/test-reporter/
+            curl -L $cc_download_url/test-reporter-latest-linux-amd64 > ./cc
+            chmod +x ./cc
+      - run:
+          name: Build the image(s)
+          command: |
+            docker-compose build
+
+      - run:
+          name: Run setup
+          command: |
+            docker-compose run web bin/ci
+
+      - run:
+          name: Run tests
+          command: |
+            # notify code climate that a build is starting
+            ./cc before-build
+            # run the specs
+            docker-compose run --name=tests web bundle exec rake
+            # copy coverage results out of the container
+            docker cp tests:/usr/src/app/coverage ./coverage
+            # notify code climate build is finished
+            ./cc after-build -t simplecov
+
+      - store_artifacts:
+          path: ./coverage
