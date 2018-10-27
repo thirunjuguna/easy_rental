@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   before_action :to_dashboard
+  layout :false
 
   def index
   end
