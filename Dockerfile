@@ -3,7 +3,10 @@ FROM ruby:2.5.1 AS base
 
 WORKDIR /easy_rental
 
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs && apt-get install yarn -qq
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev && apt-get install yarn -qq
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+        && apt-get install -y nodejs
 
 RUN gem install bundler
 
