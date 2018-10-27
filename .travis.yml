@@ -9,4 +9,5 @@ rvm:
   - 2.5.1
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rubocop
   - bundle exec rspec
