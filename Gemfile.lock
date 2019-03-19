@@ -116,7 +116,7 @@ GEM
     jar-dependencies (0.4.0)
     jaro_winkler (1.5.2)
     jaro_winkler (1.5.2-java)
-    jbuilder (2.7.0)
+    jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jquery-rails (4.3.3)
@@ -339,7 +339,7 @@ DEPENDENCIES
   devise
   guard-rspec
   guard-rubocop
-  jbuilder (~> 2.5)
+  jbuilder (~> 2.8)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   paginate
