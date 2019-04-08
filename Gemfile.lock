@@ -163,7 +163,7 @@ GEM
     orm_adapter (0.5.0)
     paginate (4.0.1)
     parallel (1.17.0)
-    parser (2.6.2.0)
+    parser (2.6.2.1)
       ast (~> 2.4.0)
     pg (1.1.4)
     pg (1.1.4-x64-mingw32)
@@ -241,7 +241,7 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.67.1)
+    rubocop (0.67.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -349,7 +349,7 @@ DEPENDENCIES
   redis (~> 4.1)
   rolify
   rspec-rails
-  rubocop (~> 0.67.1)
+  rubocop (~> 0.67.2)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
