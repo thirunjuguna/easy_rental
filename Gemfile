@@ -8,7 +8,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'coveralls', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.8'
