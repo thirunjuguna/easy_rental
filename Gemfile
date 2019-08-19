@@ -20,7 +20,7 @@ gem 'rails', '~> 5.2.3'
 gem 'redis', '~> 4.1'
 gem 'rolify'
 gem 'rubocop', '~>0.74.0'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', :platforms => [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier', '>= 1.3.0'
