@@ -29,7 +29,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'rspec-rails'
 end
-gem 'listen', '>= 3.0.5', '< 3.2'
+gem 'listen', '>= 3.0.5', '< 3.6'
 group :development do
   gem 'guard-rubocop'
   gem 'web-console', '>= 3.3.0'
